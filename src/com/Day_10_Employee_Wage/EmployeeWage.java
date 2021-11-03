@@ -7,12 +7,12 @@ public class EmployeeWage implements IComputeEmpWage
 	public final int IS_FULL_TIME = 1;
 	public final int IS_PART_TIME = 2;
 
-	private LinkedList<CompanyEmpWage> companyEmpWageList;
+	private ArrayList<CompanyEmpWage> companyEmpWageList;
 	private Map<String, CompanyEmpWage> companyToEmpWageMap;
 
 	public EmployeeWage() 
 	{
-		companyEmpWageList = new LinkedList<>();
+		companyEmpWageList = new ArrayList<>();
 		companyToEmpWageMap = new HashMap<>();
 	}
 
