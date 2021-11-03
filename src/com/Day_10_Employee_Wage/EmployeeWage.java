@@ -38,13 +38,6 @@ public class EmployeeWage implements IComputeEmpWage
 	{
 		return companyToEmpWageMap.get(company).totalEmpWage;
 	}
-	
-	/*
- 	public int getDailyWage(String company)
-	{
-		return companyToEmpWageMap.get(company).dailyEmpWage;
-	}
-	*/
 
 	public int computeEmpWage(CompanyEmpWage companyEmpWage) 
 	{

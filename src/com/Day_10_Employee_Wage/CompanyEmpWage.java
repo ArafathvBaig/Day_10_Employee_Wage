@@ -24,13 +24,6 @@ public class CompanyEmpWage
 		this.totalEmpWage= totalEmpWage;
 	}
 	
-	/*
-	public void setDailyEmpWage(int dailyEmpWage)
-	{
-		this.dailyEmpWage= dailyEmpWage;
-	}
-	*/
-	
 	@Override
 	public String toString()
 	{
