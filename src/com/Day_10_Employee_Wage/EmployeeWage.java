@@ -32,12 +32,19 @@ public class EmployeeWage implements IComputeEmpWage
 			System.out.println(companyEmpWage);
 		}
 	}
-
+	
 	@Override
 	public int getTotalWage(String company)
 	{
 		return companyToEmpWageMap.get(company).totalEmpWage;
 	}
+	
+	/*
+ 	public int getDailyWage(String company)
+	{
+		return companyToEmpWageMap.get(company).dailyEmpWage;
+	}
+	*/
 
 	public int computeEmpWage(CompanyEmpWage companyEmpWage) 
 	{
@@ -81,7 +88,8 @@ public class EmployeeWage implements IComputeEmpWage
 				totalWorkingHours = totalWorkingHours + empHrs;
 				totalWorkingDays++;
 				if ((totalWorkingHours <= companyEmpWage.maxWorkingHours)
-						&& (totalWorkingDays <= companyEmpWage.maxWorkingDays)) {
+						&& (totalWorkingDays <= companyEmpWage.maxWorkingDays)) 
+				{
 					System.out.println("Day#: " + totalWorkingDays);
 					System.out.println(+empCheck);
 					System.out.println("Part Time Employee");
@@ -98,7 +106,8 @@ public class EmployeeWage implements IComputeEmpWage
 				totalWorkingHours = totalWorkingHours + empHrs;
 				totalWorkingDays++;
 				if ((totalWorkingHours <= companyEmpWage.maxWorkingHours)
-						&& (totalWorkingDays <= companyEmpWage.maxWorkingDays)) {
+						&& (totalWorkingDays <= companyEmpWage.maxWorkingDays)) 
+				{
 					System.out.println("Day#: " + totalWorkingDays);
 					System.out.println(+empCheck);
 					System.out.println("Employee is Absent");
@@ -114,7 +123,8 @@ public class EmployeeWage implements IComputeEmpWage
 		return totalWorkingHours * companyEmpWage.empRatePerHour;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		IComputeEmpWage employeeWage = new EmployeeWage();
 		employeeWage.addCompanyEmpWage("Reliance", 20, 20, 100);
 		employeeWage.addCompanyEmpWage("Heritage", 21, 22, 110);

@@ -7,6 +7,7 @@ public class CompanyEmpWage
 	public final int maxWorkingDays;
 	public final int maxWorkingHours;
 	public int totalEmpWage;
+	public int dailyEmpWage;
 	
 	public CompanyEmpWage(String company, int empRatePerHour,
 			int maxWorkingDays, int maxWorkingHours)
@@ -22,6 +23,13 @@ public class CompanyEmpWage
 	{
 		this.totalEmpWage= totalEmpWage;
 	}
+	
+	/*
+	public void setDailyEmpWage(int dailyEmpWage)
+	{
+		this.dailyEmpWage= dailyEmpWage;
+	}
+	*/
 	
 	@Override
 	public String toString()
